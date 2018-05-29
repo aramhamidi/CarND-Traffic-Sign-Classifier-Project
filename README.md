@@ -25,6 +25,7 @@ are in each class.
 ### Design and Test a Model Architecture
 
 **Preprocessing**
+
 I tried training my model with both grayscale images and RGB colored images. However I got better accuracy result using colored images so I chose to not to go with grayscaling them.
 
 I have also normalized the image pixels. My understanding is that of the pixel values are normalized between 0 to 1 with covariance of 1, traingin the CNN would be much easier. Having the real values of pixels will add un-necessary information to our set, and the CNN needs to learn about all those information as well, while it is not needed. For example in our case, there should not be any differentce between a traffic sign image taken in day light or evening time, both of them should be interpreted the same. So here the brightness of picture is additional information which our CNN does not need to care about.
@@ -64,16 +65,17 @@ Final model consisted of the following Five layers:
 
 As you can see dropouts are used with keep_prob = 0.7 in each fully connected layers 4 and 5. I have also noticed if I use Elu function instead of ReLu as activation, results have better accuracy.
 
-### Train, Validate and Test the Model
+### Train, Validate and Test 
 
 To train the model, I used learning rate of 0.001, with 15 epoches each with size of 128. I hgave also used Adam Optimizer algorithm, which is more sophisticated than
 
 As you can see I have used dropouts with keep_prob = 0.7 in each fully connected layers 4 and 5. I have also noticed if I use Elu function instead of ReLu as activation I can get better accuracy results.
 
 **Final Model Results**
+
 validation set accuracy of 0.937 test set accuracy of 0.912 accuracy of downloaded images set of 0.6 or 60%.
 
-### Test a Model on New Images
+### Model Test Results on New Images
 
 Here are five German traffic signs that I found on the web:
 
